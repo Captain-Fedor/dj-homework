@@ -6,7 +6,8 @@ from django.db import models
 class Phone(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField('name', max_length=50)
-    image = models.ImageField('image', upload_to='images/')
+    image = models.URLField()
+    # image = models.ImageField('image', upload_to='images/')
     price = models.IntegerField('price')
     release_date = models.DateField('release_date', auto_now=True)
     lte_exists = models.BooleanField()

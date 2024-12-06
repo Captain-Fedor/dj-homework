@@ -7,6 +7,10 @@ d = [
 dc = {'id': '1', 'name': 'Samsung Galaxy Edge 2',
       'image': 'https://avatars.mds.yandex.net/get-mpic/364668/img_id5636027222104023144.jpeg/orig',
       'price': '73000', 'release_date': '2016-12-12', 'lte_exists': 'True'}
-for key, value in dc.items():
-    print(f'{key} = {value}')
+# for key, value in dc.items():
+#     print(f'{key} = {value}')
 
+from phones.models import Phone
+
+context = Phone.objects.all()
+print(context)

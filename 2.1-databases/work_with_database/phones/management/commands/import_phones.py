@@ -18,12 +18,12 @@ class Command(BaseCommand):
             slug_address = slugify(phone['name'])
             Phone.objects.create(
                 id=phone['id'],
-                name=f"'{phone['name']}'",
-                image=f"'{phone['image']}'",
+                name=f"{phone['name']}",
+                image=f"{phone['image']}",
                 price=int(phone['price']),
                 release_date=f"'{phone['release_date']}'",
                 lte_exists=phone['lte_exists'],
-                slug=f"'{slug_address}'"
+                slug=f"{slug_address}"
             )
         # with open('phones.csv', 'r') as file:
         #     phones = list(csv.DictReader(file, delimiter=';'))
